@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="rectangle" >
+            <solid android:color="#FFFFFF" />
+            <corners android:radius="8dp"/>
+        </shape>
+    </item>
+</layer-list><!-- From: file:/C:/workFeedback/Android/Feedback/src/main/res/drawable-hdpi/feedback_prompt_background.xml -->

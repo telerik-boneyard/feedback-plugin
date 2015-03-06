@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:feedback="http://schemas.android.com/apk/res-auto" >
+    <item android:id="@+id/action_refresh"
+        android:title="Refresh"
+        android:icon="@drawable/ic_feedback_sync"
+        feedback:showAsAction="always"/>
+</menu><!-- From: file:/C:/Program%20Files%20(x86)/Jenkins/jobs/BuildAll_master/workspace/Feedback/src/main/res/menu/view_feedback_items_activity_menu.xml -->

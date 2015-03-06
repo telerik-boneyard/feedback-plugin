@@ -1,0 +1,23 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_margin="16dp"
+    tools:context="com.telerik.widget.feedback.EditDetailsActivity">
+
+    <EditText
+        android:id="@+id/txtAuthorName"
+        android:hint="Name"
+        android:inputType="textPersonName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:layout_margin="4dp"
+        android:text="@string/author_name_tip"
+        android:textSize="16sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>
+<!-- From: file:/C:/workFeedback/Android/Feedback/src/main/res/layout/activity_edit_details.xml -->

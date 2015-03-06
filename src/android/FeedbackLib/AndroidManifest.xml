@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.telerik.widget.feedback"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="9"
+        android:targetSdkVersion="19" />
+
+    <application android:allowBackup="true" >
+        <activity
+            android:name="com.telerik.widget.feedback.SendFeedbackActivity"
+            android:label="@string/title_activity_send_feedback"
+            android:theme="@style/AppCompatTheme" >
+        </activity>
+        <activity
+            android:name="com.telerik.widget.feedback.ViewFeedbackActivity"
+            android:label="@string/title_activity_view_feedback"
+            android:theme="@style/AppCompatTheme" >
+        </activity>
+        <activity
+            android:name="com.telerik.widget.feedback.ViewFeedbackItemActivity"
+            android:label="@string/title_activity_view_feedback"
+            android:theme="@style/AppCompatTheme" >
+        </activity>
+        <activity
+            android:name="com.telerik.widget.feedback.EditDetailsActivity"
+            android:label="@string/title_activity_edit_details"
+            android:theme="@style/AppCompatTheme" >
+        </activity>
+    </application>
+
+</manifest>

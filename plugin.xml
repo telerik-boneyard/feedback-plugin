@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    id="com.telerik.feedback"
+    version="1.4">
+
+    <name>Telerik AppFeedback</name>
+    <description>This plugin allows the app to include Telerik AppFeedback functionality on device shake.</description>
+    <license>Commercial</license>
+    <keywords>cordova,device</keywords>
+    <url>http://docs.telerik.com/platform/appfeedback</url>
+    <engines>
+        <engine name="cordova" version=">=3.0.0" />
+    </engines>
+
+    <js-module src="www/feedback.js" name="feedback">
+        <clobbers target="feedback" />
+    </js-module>
+
+    <js-module src="www/shake.js" name="shake">
+        <clobbers target="Shake" />
+    </js-module>
+
+    <platform name="ios">
+        <config-file target="config.xml" parent="/*">
+            <feature name="AppFeedback">
+                <param name="ios-package" value="TLRKFeedback"/>
+            </feature>
+        </config-file>
+        <header-file src="src/ios/TLRKFeedback.h" />
+        <source-file src="src/ios/TLRKFeedback.m" />
+        <framework src="src/ios/TelerikAppFeedback.framework" weak="false" custom="true"/>
+        <framework src="libsqlite3.dylib" />
+        <framework src="Foundation.framework" weak="true" />
+    </platform>
+
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="AppFeedback">
+                <param name="android-package" value="com.telerik.feedback.AppFeedback" />
+            </feature>
+        </config-file>
+
+        <config-file target="AndroidManifest.xml" parent="application">
+            <activity android:label="@string/title_activity_send_feedback" android:name="com.telerik.widget.feedback.SendFeedbackActivity" android:theme="@style/AppCompatTheme">
+            </activity>
+            <activity android:label="@string/title_activity_view_feedback" android:name="com.telerik.widget.feedback.ViewFeedbackActivity" android:theme="@style/AppCompatTheme">
+            </activity>
+            <activity android:label="@string/title_activity_view_feedback" android:name="com.telerik.widget.feedback.ViewFeedbackItemActivity" android:theme="@style/AppCompatTheme">
+            </activity>
+            <activity android:label="@string/title_activity_edit_details" android:name="com.telerik.widget.feedback.EditDetailsActivity" android:theme="@style/AppCompatTheme">
+            </activity>
+        </config-file>
+
+        <config-file target="AndroidManifest.xml" parent="/*">
+            <uses-permission android:name="android.permission.INTERNET" />
+        </config-file>
+
+        <source-file src="src/android/com/telerik/feedback/AppFeedback.java" target-dir="src/com/telerik/feedback" />
+        
+        <framework src="src/android/FeedbackLib" custom="true" />
+        <framework src="extras/android/support/v7/appcompat" parent="src/android/FeedbackLib" />
+    </platform>
+</plugin>
