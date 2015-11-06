@@ -3,7 +3,6 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     id="com.telerik.feedback"
     version="1.4">
-
     <name>Telerik AppFeedback</name>
     <description>This plugin allows the app to include Telerik AppFeedback functionality on device shake.</description>
     <license>Commercial</license>
@@ -21,6 +20,10 @@
         <clobbers target="Shake" />
     </js-module>
 
+    <preference name="PRODUCT_KEY" default="YourKeyHere"/>
+    <preference name="ENABLE_SHAKE" default="true" />
+    <preference name="API_URL" default="https://platform.telerik.com/feedback/api/v1" />
+
     <platform name="ios">
         <config-file target="config.xml" parent="/*">
             <feature name="AppFeedback">
@@ -32,6 +35,16 @@
         <framework src="src/ios/TelerikAppFeedback.framework" weak="false" custom="true"/>
         <framework src="libsqlite3.dylib" />
         <framework src="Foundation.framework" weak="true" />
+
+        <config-file target="*-Info.plist" parent="productKey">
+          <string>$PRODUCT_KEY</string>
+        </config-file>
+        <config-file target="*-Info.plist" parent="apiUrl">
+          <string>$API_URL</string>
+        </config-file>
+        <config-file target="*-Info.plist" parent="enableShake">
+          <string>$ENABLE_SHAKE</string>
+        </config-file>
     </platform>
 
     <platform name="android">

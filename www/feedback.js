@@ -1,7 +1,7 @@
 'use strict';
 
 var cordova = require('cordova'),
-    API_BASE_URL = 'https://platform.telerik.com/feedback/api/v1',
+    API_BASE_URL = 'https://platform.telerik.com/feedback/api/v1',    
     Feedback = function () {
         this.initialize = function (apiKey, options) {
             var that = this;
@@ -42,5 +42,22 @@ var cordova = require('cordova'),
         };
     },
     feedback = new Feedback();
+    
+window.addEventListener('deviceready', function () {    
+    cordova.exec(function(data) {
+      if(data.productKey !== "YourKeyHere"){        
+        var feedbackOptions = {
+            enableShake: data.enableShake,
+            apiUrl: data.apiUrl
+        };
+        feedback.initialize(data.productKey, feedbackOptions);
+        window.productKey = data.productKey;
+      } 
+    }, function(err) { 
+       window.data = err;
+       console.log('Unable to read required plugin variables: ' + err);
+      }, 'AppFeedback', 'GetVariables', [ 'productKey', 'apiUrl', 'enableShake' ]);
+
+}, true);
 
 module.exports = feedback;
