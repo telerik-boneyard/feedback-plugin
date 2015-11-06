@@ -20,7 +20,7 @@
         <clobbers target="Shake" />
     </js-module>
 
-    <preference name="PRODUCT_KEY" default="YourKeyHere"/>
+    <preference name="API_KEY" default="YourKeyHere"/>
     <preference name="ENABLE_SHAKE" default="true" />
     <preference name="API_URL" default="https://platform.telerik.com/feedback/api/v1" />
 
@@ -36,8 +36,8 @@
         <framework src="libsqlite3.dylib" />
         <framework src="Foundation.framework" weak="true" />
 
-        <config-file target="*-Info.plist" parent="productKey">
-          <string>$PRODUCT_KEY</string>
+        <config-file target="*-Info.plist" parent="apiKey">
+          <string>$API_KEY</string>
         </config-file>
         <config-file target="*-Info.plist" parent="apiUrl">
           <string>$API_URL</string>

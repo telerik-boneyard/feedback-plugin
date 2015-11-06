@@ -45,17 +45,17 @@ var cordova = require('cordova'),
     
 window.addEventListener('deviceready', function () {    
     cordova.exec(function(data) {
-      if(data.productKey !== "YourKeyHere"){        
+      if(data.apiKey !== "YourKeyHere"){        
         var feedbackOptions = {
             enableShake: data.enableShake,
             apiUrl: data.apiUrl
         };
-        feedback.initialize(data.productKey, feedbackOptions);        
+        feedback.initialize(data.apiKey, feedbackOptions);        
       } 
     }, function(err) { 
        window.data = err;
        console.log('Unable to read required plugin variables: ' + err);
-      }, 'AppFeedback', 'GetVariables', [ 'productKey', 'apiUrl', 'enableShake' ]);
+      }, 'AppFeedback', 'GetVariables', [ 'apiKey', 'apiUrl', 'enableShake' ]);
 
 }, true);
 
