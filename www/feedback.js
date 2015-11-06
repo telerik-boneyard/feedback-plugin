@@ -50,8 +50,7 @@ window.addEventListener('deviceready', function () {
             enableShake: data.enableShake,
             apiUrl: data.apiUrl
         };
-        feedback.initialize(data.productKey, feedbackOptions);
-        window.productKey = data.productKey;
+        feedback.initialize(data.productKey, feedbackOptions);        
       } 
     }, function(err) { 
        window.data = err;
