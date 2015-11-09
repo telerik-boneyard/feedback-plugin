@@ -45,11 +45,12 @@ var cordova = require('cordova'),
     
 window.addEventListener('deviceready', function () {    
     cordova.exec(function(data) {
-      if(data.apiKey !== "YourKeyHere"){        
+      if(data.apiKey !== "YourKeyHere"){
+        var shouldEnableShake = data.enableShake === 'true'        
         var feedbackOptions = {
-            enableShake: data.enableShake,
+            enableShake: shouldEnableShake,
             apiUrl: data.apiUrl
-        };
+        };        
         feedback.initialize(data.apiKey, feedbackOptions);        
       } 
     }, function(err) { 
