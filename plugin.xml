@@ -2,7 +2,7 @@
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
     xmlns:android="http://schemas.android.com/apk/res/android"
     id="com.telerik.feedback"
-    version="1.6">
+    version="1.5">
 
     <name>Telerik AppFeedback</name>
     <description>This plugin allows the app to include Telerik AppFeedback functionality on device shake.</description>
@@ -68,7 +68,7 @@
         </config-file>
 
         <source-file src="src/android/res/values/feedback.xml" target-dir="res/values" />
-        <config-file target="res/values/feedback.xml" parent="/*">
+        <config-file target="res/values/strings.xml" parent="/*">
           <string name="apiKey">$API_KEY</string>
           <string name="apiUrl">$API_URL</string>
           <string name="enableShake">$ENABLE_SHAKE</string>
