@@ -66,7 +66,7 @@
         </config-file>
 
         <source-file src="src/android/res/values/feedback.xml" target-dir="res/values" />
-        <config-file target="res/values/feedback.xml" parent="/*">
+        <config-file target="res/values/strings.xml" parent="/*">
           <string name="apiKey">$API_KEY</string>
           <string name="apiUrl">$API_URL</string>
           <string name="enableShake">$ENABLE_SHAKE</string>
