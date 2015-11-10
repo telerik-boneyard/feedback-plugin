@@ -10,7 +10,7 @@
     <keywords>cordova,device</keywords>
     <url>http://docs.telerik.com/platform/appfeedback</url>
     <engines>
-        <engine name="cordova-ios" version="    >=3" />
+        <engine name="cordova-ios" version=">=3" />
         <engine name="cordova-android" version=">=4" />
     </engines>
 
@@ -39,13 +39,13 @@
         <framework src="Foundation.framework" weak="true" />
 
         <config-file target="*-Info.plist" parent="apiKey">
-          <string>$API_KEY</string>
+            <string>$API_KEY</string>
         </config-file>
         <config-file target="*-Info.plist" parent="apiUrl">
-          <string>$API_URL</string>
+            <string>$API_URL</string>
         </config-file>
         <config-file target="*-Info.plist" parent="enableShake">
-          <string>$ENABLE_SHAKE</string>
+            <string>$ENABLE_SHAKE</string>
         </config-file>
     </platform>
 
@@ -69,9 +69,9 @@
 
         <source-file src="src/android/res/values/feedback.xml" target-dir="res/values" />
         <config-file target="res/values/strings.xml" parent="/*">
-          <string name="apiKey">$API_KEY</string>
-          <string name="apiUrl">$API_URL</string>
-          <string name="enableShake">$ENABLE_SHAKE</string>
+            <string name="apiKey">$API_KEY</string>
+            <string name="apiUrl">$API_URL</string>
+            <string name="enableShake">$ENABLE_SHAKE</string>
         </config-file>
 
         <config-file target="AndroidManifest.xml" parent="/*">

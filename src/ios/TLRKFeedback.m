@@ -33,23 +33,24 @@
 
 -(void)GetVariables:(CDVInvokedUrlCommand*)command
 {
-  NSMutableDictionary *values = [NSMutableDictionary dictionary];
-  int i;
-  for (i = 0; i < [command.arguments count]; i++) 
-  {
-    @try
+    NSMutableDictionary *values = [NSMutableDictionary dictionary];
+    int i;
+    for (i = 0; i < [command.arguments count]; i++)
     {
-      NSString *variableName = [command argumentAtIndex:i];
-      NSString *variableValue = [[[NSBundle mainBundle] infoDictionary] objectForKey:variableName];
-      [values setObject:variableValue forKey:variableName];
+        @try
+        {
+            NSString *variableName = [command argumentAtIndex:i];
+            NSString *variableValue = [[[NSBundle mainBundle] infoDictionary] objectForKey:variableName];
+            [values setObject:variableValue forKey:variableName];
+        }
+        @catch (NSException *exception)
+        {
+        }
     }
-    @catch (NSException *exception)
-    {
-    }
-  }
 
-  CDVPluginResult *result = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsDictionary:values];
-  NSString *callbackId = [command callbackId];
-  [self success:result callbackId:callbackId];
+    CDVPluginResult *result = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsDictionary:values];
+    NSString *callbackId = [command callbackId];
+    [self success:result callbackId:callbackId];
 }
+
 @end
