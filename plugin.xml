@@ -11,7 +11,7 @@
     <url>http://docs.telerik.com/platform/appfeedback</url>
     <engines>
         <engine name="cordova-ios" version=">=3" />
-        <engine name="cordova-android" version=">=4" />
+        <engine name="cordova-android" version=">=3.6.0" />
     </engines>
 
     <js-module src="www/feedback.js" name="feedback">
