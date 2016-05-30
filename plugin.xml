@@ -38,6 +38,8 @@
         <framework src="libsqlite3.dylib" />
         <framework src="Foundation.framework" weak="true" />
 
+        <dependency id="cordova-plugin-device" />
+
         <config-file target="*-Info.plist" parent="apiKey">
             <string>$API_KEY</string>
         </config-file>
