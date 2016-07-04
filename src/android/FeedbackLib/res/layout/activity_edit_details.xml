@@ -8,7 +8,7 @@
 
     <EditText
         android:id="@+id/txtAuthorName"
-        android:hint="Name"
+        android:hint="@string/feedback_author_name_hint"
         android:inputType="textPersonName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
@@ -20,4 +20,4 @@
         android:layout_height="wrap_content" />
 
 </LinearLayout>
-<!-- From: file:/C:/workFeedback/Android/Feedback/src/main/res/layout/activity_edit_details.xml -->
+<!-- From: file:/C:/_J/jobs/Android_2016q2_Upload/workspace/Feedback/src/main/res/layout/activity_edit_details.xml -->

@@ -46,7 +46,7 @@
                     android:id="@+id/txtFeedbackText"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textColor="#FF838383"
+                    android:textColor="@color/view_feedback_item_text_color"
                     android:textSize="18sp" />
 
                 <FrameLayout
@@ -103,7 +103,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
-        android:background="#C8FFFFFF"
+        android:background="@color/view_feedback_item_comments_background"
         android:orientation="vertical">
 
         <View
@@ -124,7 +124,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="bottom"
                 android:layout_weight="1"
-                android:hint="Your comment" />
+                android:hint="@string/feedback_your_comment_hint" />
 
             <View
                 android:layout_width="1dp"
@@ -142,4 +142,4 @@
 
         </LinearLayout>
     </LinearLayout>
-</FrameLayout><!-- From: file:/C:/Program%20Files%20(x86)/Jenkins/jobs/BuildAll_master/workspace/Feedback/src/main/res/layout/activity_view_feedback_item.xml -->
+</FrameLayout><!-- From: file:/C:/_J/jobs/Android_2016q2_Upload/workspace/Feedback/src/main/res/layout/activity_view_feedback_item.xml -->
