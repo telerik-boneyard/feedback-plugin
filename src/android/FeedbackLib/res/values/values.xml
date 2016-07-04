@@ -1,27 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
-    <!-- From: file:/C:/Program%20Files%20(x86)/Jenkins/jobs/BuildAll_master/workspace/Feedback/src/main/res/values/colors.xml -->
-    <eat-comment />
-	
-	<color name="white">#FFFFFFFF</color>
+    <!-- From: file:/C:/_J/jobs/Android_2016q2_Upload/workspace/Feedback/src/main/res/values/colors.xml -->
+    <eat-comment/>
     <color name="dark_grey_text_color">#FF838383</color>
     <color name="grey_text_color">#C4C4C4</color>
     <color name="light_blue">#33B5E5</color>
     <color name="light_grey">#FFE5E5E5</color>
+    <color name="progress_bar_background">#FFFFFFFF</color>
     <color name="status_open_color">#FF8ABD00</color>
     <color name="status_resolved_color">#FFFF9105</color>
     <color name="text_editor_background">#D9FFFFFF</color>
-    <!-- From: file:/C:/Program%20Files%20(x86)/Jenkins/jobs/BuildAll_master/workspace/Feedback/src/main/res/values/dimens.xml -->
-    <eat-comment />
-
-    <dimen name="activity_horizontal_margin">16dp</dimen>
-    <dimen name="activity_vertical_margin">16dp</dimen>
+    <color name="view_feedback_item_comments_background">#C8FFFFFF</color>
+    <color name="view_feedback_item_text_color">#FF838383</color>
+    <!-- From: file:/C:/_J/jobs/Android_2016q2_Upload/workspace/Feedback/src/main/res/values/dimens.xml -->
+    <eat-comment/>
     <dimen name="feedback_indicator_size">32dp</dimen>
     <dimen name="pager_tab_strip_padding">16dp</dimen>
-    <!-- From: file:/C:/Program%20Files%20(x86)/Jenkins/jobs/BuildAll_master/workspace/Feedback/src/main/res/values/strings.xml -->
-    <eat-comment />
-
+    <!-- From: file:/C:/_J/jobs/Android_2016q2_Upload/workspace/Feedback/src/main/res/values/strings.xml -->
+    <eat-comment/>
     <string name="action_edit_settings">Settings</string>
     <string name="action_send_feedback">Send feedback</string>
     <string name="action_settings">Settings</string>
@@ -31,8 +27,29 @@
     <string name="date_time_format_string">yyyy-MM-dd\'T\'HH:mm:ss.SSS\'Z\'</string>
     <string name="date_time_label_format_string">MMMM dd, yyyy h:mm a</string>
     <string name="edit_settings_desc">"Edit your name that will appear along with your feedback."</string>
+    <string name="feedback_activity_multiple_comments_label_format">%d Comments</string>
+    <string name="feedback_activity_single_comment_label_format">%d Comment</string>
+    <string name="feedback_add_comment_reminder">Please add your comment before sending.</string>
+    <string name="feedback_author_anonymous">Anonymous</string>
+    <string name="feedback_author_name_hint">Name</string>
+    <string name="feedback_button_text_anonymous">Send anonymously</string>
+    <string name="feedback_comment_not_sent">Error sending comment.</string>
+    <string name="feedback_comment_sent">Comment sent.</string>
+    <string name="feedback_comments_not_retrieved">Could not retrieve comments.</string>
+    <string name="feedback_continue_info">Continue</string>
+    <string name="feedback_multiple_comments_label_format">%d COMMENTS</string>
+    <string name="feedback_no_data_ready">There is no feedback data ready to be sent.</string>
+    <string name="feedback_not_retrieved">Could not retrieve feedback.</string>
+    <string name="feedback_not_sent">Could not send feedback.</string>
+    <string name="feedback_refresh_title">Refresh</string>
+    <string name="feedback_screenshot_load_error">Error loading screenshot.</string>
+    <string name="feedback_send_title">Send</string>
+    <string name="feedback_sent">Feedback sent.</string>
+    <string name="feedback_single_comment_label_format">%d COMMENT</string>
+    <string name="feedback_your_comment_hint">Your comment</string>
     <string name="label_comments_cap">COMMENTS</string>
     <string name="no_feedback_items_text">There are currently no items in this category. Try sending us feedback via the \'Send feedback\' button.</string>
+    <string name="send_feedback_activity_feedback_hint">Your feedback</string>
     <string name="send_feedback_desc">"Submit your feedback about the app."</string>
     <string name="status_open">Open</string>
     <string name="status_resolved">Resolved</string>
@@ -41,9 +58,11 @@
     <string name="title_activity_view_feedback">Your feedback</string>
     <string name="title_activity_view_item_feedback">Edit feedback</string>
     <string name="view_feedback_desc">"See what's happening with the feedback you've already sent us."</string>
-    <!-- From: file:/C:/Program%20Files%20(x86)/Jenkins/jobs/BuildAll_master/workspace/Feedback/src/main/res/values/themes.xml -->
-    <eat-comment />
-
-    <style name="AppCompatTheme" parent="Theme.AppCompat.Light"></style>
-
+    <string name="view_feedback_tab_all">ALL</string>
+    <string name="view_feedback_tab_open">OPEN</string>
+    <string name="view_feedback_tab_resolved">RESOLVED</string>
+    <!-- From: file:/C:/_J/jobs/Android_2016q2_Upload/workspace/Feedback/src/main/res/values/themes.xml -->
+    <eat-comment/>
+    <style name="AppCompatTheme" parent="Theme.AppCompat.Light">
+    </style>
 </resources>

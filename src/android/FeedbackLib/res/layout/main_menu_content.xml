@@ -11,16 +11,17 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="18sp"
-        android:text="Send feedback"
+        android:text="@string/title_activity_send_feedback"
         android:layout_margin="16dp"
         android:textColor="@color/light_blue" />
+
     <View
         android:background="@color/light_blue"
         android:layout_width="match_parent"
-        android:layout_height="2dp"/>
+        android:layout_height="2dp" />
 
     <ListView
         android:id="@+id/menuList"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
-</LinearLayout><!-- From: file:/C:/Program%20Files%20(x86)/Jenkins/jobs/BuildAll_master/workspace/Feedback/src/main/res/layout/main_menu_content.xml -->
+        android:layout_height="wrap_content" />
+</LinearLayout><!-- From: file:/C:/_J/jobs/Android_2016q2_Upload/workspace/Feedback/src/main/res/layout/main_menu_content.xml -->

@@ -6,4 +6,4 @@
     android:orientation="vertical">
 
     <include layout="@layout/activity_edit_details" />
-</LinearLayout><!-- From: file:/C:/Program%20Files%20(x86)/Jenkins/jobs/BuildAll_master/workspace/Feedback/src/main/res/layout/popup_edit_details.xml -->
+</LinearLayout><!-- From: file:/C:/_J/jobs/Android_2016q2_Upload/workspace/Feedback/src/main/res/layout/popup_edit_details.xml -->

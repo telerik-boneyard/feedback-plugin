@@ -77,7 +77,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="bottom"
                         android:layout_weight="1"
-                        android:hint="Your feedback" />
+                        android:hint="@string/send_feedback_activity_feedback_hint" />
 
                     <View
                         android:layout_width="1dp"
@@ -102,13 +102,14 @@
             android:id="@+id/progressBar"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@color/white">
+            android:background="@color/progress_bar_background">
+
             <ProgressBar
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"/>
+                android:layout_gravity="center" />
         </FrameLayout>
 
     </FrameLayout>
 </LinearLayout>
-<!-- From: file:/C:/Program%20Files%20(x86)/Jenkins/jobs/BuildAll_master/workspace/Feedback/src/main/res/layout/activity_send_feedback.xml -->
+<!-- From: file:/C:/_J/jobs/Android_2016q2_Upload/workspace/Feedback/src/main/res/layout/activity_send_feedback.xml -->
