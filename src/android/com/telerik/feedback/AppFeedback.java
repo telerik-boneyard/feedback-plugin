@@ -95,7 +95,7 @@ public class AppFeedback extends CordovaPlugin implements RadFeedback.OnSendFeed
         @Override
         public Bitmap getBitmapFromView(View view) {
             AppFeedback.this.crosswalkLatch = new CountDownLatch(1);
-            webView.getPluginManager().postMessage("captureXWalkBitmap", this);
+            webView.postMessage("captureXWalkBitmap", this);
             try {
                 AppFeedback.this.crosswalkLatch.await(5L, TimeUnit.SECONDS);
             } catch (Exception e) {
