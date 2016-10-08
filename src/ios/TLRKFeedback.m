@@ -6,8 +6,9 @@
 //
 
 #import "TLRKFeedback.h"
-#import <Cordova/UIDevice+Extensions.h>
+#import "CDVDevice.h"
 #import <TelerikAppFeedback/AppFeedback.h>
+#import <objc/message.h>
 
 @implementation TLRKFeedback
 
@@ -17,8 +18,22 @@
 {
     NSString *apiKey = command.arguments[0];
     NSString *apiUrl = command.arguments[1];
-    NSString *uid = [[[UIDevice currentDevice] uniqueAppInstanceIdentifier] lowercaseString];
-    
+    NSString *uid;
+
+    CDVDevice *device = CDVDevice.new;
+    SEL devicePropertiesSEL = NSSelectorFromString(@"deviceProperties");
+    SEL identifierForVendorSEL = NSSelectorFromString(@"identifierForVendor");
+
+    if ([device respondsToSelector:devicePropertiesSEL]) {
+        // Use the core plugin 'cordova-plugin-device' to get the uid value.
+        // For more details see: https://github.com/apache/cordova-ios/blob/master/guides/API%20changes%20in%204.0.md
+        NSDictionary *properties = objc_msgSend(device, devicePropertiesSEL);
+        uid = properties[@"uuid"];
+    } else if ([UIDevice.currentDevice respondsToSelector:identifierForVendorSEL]) {
+        // Fallback to UIDevice's 'identifierForVendor' method.
+        uid = objc_msgSend(objc_msgSend(UIDevice.currentDevice, identifierForVendorSEL), @selector(UUIDString));
+    }
+
     TKFeedback.dataSource = [[TKPlatformFeedbackSource alloc] initWithKey:apiKey uid:uid apiBaseURL:apiUrl parameters:NULL];
 
     [self.commandDelegate sendPluginResult:[CDVPluginResult resultWithStatus:CDVCommandStatus_OK] callbackId:command.callbackId];
@@ -49,8 +64,7 @@
     }
 
     CDVPluginResult *result = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsDictionary:values];
-    NSString *callbackId = [command callbackId];
-    [self success:result callbackId:callbackId];
+    [self.commandDelegate sendPluginResult:result callbackId:command.callbackId];
 }
 
 @end
